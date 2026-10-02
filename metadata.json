@@ -1,0 +1,40 @@
+{
+  "slug": "access-review-cadence-auditor",
+  "title": "Access Review Cadence Auditor",
+  "category": "identity-governance",
+  "description": "Checks access review evidence for a bounded review age and accountable owner.",
+  "decision": "Checks access review evidence for a bounded review age and accountable owner.",
+  "limitations": "Uses caller-declared evidence only; does not verify external systems, legal requirements, or real-world truth. Human review remains required.",
+  "inputs": "A JSON object containing the documented fields. Numeric thresholds are deterministic and visible in agent.py.",
+  "good": {
+    "review_records": [
+      {
+        "user": "u1",
+        "reviewed": true
+      }
+    ],
+    "oldest_review_age_days": 30,
+    "review_owner": "iam-team"
+  },
+  "bad": {},
+  "rules": [
+    [
+      "review_records",
+      "review records",
+      "min_items",
+      1
+    ],
+    [
+      "oldest_review_age_days",
+      "oldest review age",
+      "max",
+      90
+    ],
+    [
+      "review_owner",
+      "review owner",
+      "required",
+      null
+    ]
+  ]
+}

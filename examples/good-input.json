@@ -1,0 +1,10 @@
+{
+  "review_records": [
+    {
+      "user": "u1",
+      "reviewed": true
+    }
+  ],
+  "oldest_review_age_days": 30,
+  "review_owner": "iam-team"
+}

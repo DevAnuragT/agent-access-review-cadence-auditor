@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: access-review-cadence-auditor
+version: 0.1.0
+description: "Checks access review evidence for a bounded review age and accountable owner."
+skills:
+  - access-review-cadence-auditor-skill
+tools:
+  - audit-access-review-cadence-auditor
+tags:
+  - identity-governance
+  - evidence-driven
